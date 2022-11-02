@@ -1,0 +1,486 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.button{
+    height: 60px;
+    width: 150px;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: white;
+    border-radius: 7px;
+}
+
+body{
+    font-family: sans-serif;
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+/*SECAO MENU*/
+
+#menu{
+    display: flex;
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    height: 75px;
+    z-index: 10;
+    top: 0;
+    justify-content: center;
+}
+
+#menu ul{
+    list-style: none;
+    flex-grow: 2;
+    overflow: hidden;
+}
+
+#menu li{
+    display: inline-block;
+    width: 140px;
+    height: 75px;
+    text-align: center;
+    line-height: 75px;
+    box-sizing: border-box;
+}
+
+#logo{
+    background: #63c6ae;
+    width: 230px;
+    height: 75px;
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#logo img{
+    width: 116px;
+    height: 18px;
+    margin-right: 10px;
+}
+
+#menu a{
+    color: rgb(98, 92, 92);
+    font-size: 13.5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: color 1s;
+}
+
+#menu ul a:hover{
+    color: #63c6ae;
+}
+
+#btn_menu{
+    display: none;
+    width: 74px;
+    height: 65px;
+    position: absolute;
+    top:5px;
+    right: 0;
+}
+
+/*SECAO INICIO*/
+
+#inicio{
+    background-image: url(../img/herobg.jpg);
+    height: 580px;
+    position: relative;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+
+#info{
+    width: 600px;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%,0);
+    text-align: center;
+    color: white;
+}
+
+#info h1{
+    background: #63c6ae;
+    height: 100px;
+    width: 90%;
+    line-height: 100px;
+    padding: 0 5px 0 5px;
+    margin: auto;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    font-size: 26px;
+    color: white;
+}
+
+#info p{
+    display: block;
+    background: rgb(54, 52, 52);
+    margin: auto;
+    color: white;
+    width: 70%;
+    height: 60px;
+    line-height: 60px;
+}
+
+#buy{
+    display: block;
+    margin: auto;
+    margin-top: 30px;
+    background: rgba(0, 0, 0, .2);
+    border-color: #ccc;
+}
+
+#seta{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+
+
+/*SECAO CARDS*/
+
+#cards{
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+    gap: 28px;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+
+.card{
+    width: 170px;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    padding: 100px 35px 30px 35px;
+    border-left: 1px solid #ccc;
+}
+
+.card img{
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+
+.card h1,p{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: rgb(175, 169, 169);
+}
+
+.card h1{
+    font-weight: 300;
+    font-size: 23px;
+}
+
+.card:nth-child(1){
+    background-image: url('../img/c01.jpg');
+}
+.card:nth-child(2){
+    background-image: url('../img/c02.jpg');
+}
+.card:nth-child(3){
+    background-image: url('../img/c03.jpg');
+}
+.card:nth-child(4){
+    background-image: url('../img/c04.jpg');
+}
+
+.card:hover{
+    outline: 5px solid #63c6ae;
+    outline-offset: -5px;
+}
+
+.card:hover p{
+    color: #63c6ae;
+}
+
+.card:hover h1{
+    color: #63c6ae;
+}
+.card:hover img{
+    outline: 5px solid #63c6ae;
+    outline-offset: -5px;
+}
+
+/*SECAO TEXTO*/
+
+#text{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    background: #ddd;
+    padding: 100px 0;
+}
+
+#text p{
+    margin: 20px 0;
+}
+
+#text h1{
+    color: rgb(102, 98, 98);
+    font-size: 20px;
+}
+
+#text div{
+    width: 500px;
+}
+
+
+#text button:nth-child(3){
+    background: #63c6ae;
+    margin-right: 15px;
+}
+
+#text button:nth-child(4){
+    background: rgb(80, 79, 79);
+}
+
+#text button{
+    border: none;
+    transition: background-color 1s;
+}
+
+#text button:hover{
+    background-color: #929da5;
+}
+/*SECAO ARTIGOS*/
+
+#articles h1{
+    height: 80px;
+    vertical-align: middle;
+    text-transform: uppercase;
+    color: white;
+    background: #63c6ae;
+    padding: 20px 150px;
+    box-sizing: border-box;
+}
+
+#articles_imgs{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px, 1fr));
+    grid-auto-rows: auto;
+}
+
+#articles_imgs img{
+    width: 100%;
+    height: 100%;
+}
+
+
+/*SECAO CARROSEL 1*/
+
+#carrosel{
+    background: rgb(61, 59, 59);
+    padding: 100px 0;
+}
+
+#carrosel_imgs span{
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+    cursor: pointer;
+}
+
+.fas{
+    color: white;
+}
+
+#carrosel_imgs .prev{
+    left: 0;
+}
+
+#carrosel_imgs .next{
+    right: 0;
+}
+
+
+#carrosel_imgs{
+    position: relative;
+    margin: 0px auto;
+    overflow: hidden;
+    max-width: 830px;
+    height: 503px;
+}
+
+#carrosel_imgs img{
+    max-width: 100%;
+}
+
+.slider{
+    width: 830px;
+    position: absolute;
+    opacity: 0;
+    transition: opacity .8s;
+    pointer-events: none;
+}
+
+
+/*SECAO SLIDER TEXTO*/
+
+#slider_text{
+    background: #63c6ae;
+    position: relative;
+}
+
+#slider_text div{
+    position: relative;
+    min-height: 230px;
+    margin: auto;
+    max-width: 950px;
+    padding: 50px;
+    color: white;
+}
+
+#slider_text span{
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+}
+
+
+#slider_text .prev{
+    left: 10px;
+}
+
+#slider_text .next{
+    right: 10px;
+}
+
+
+
+.citacao{
+    position: absolute;
+    opacity: 0;
+    transition: opacity .8s;
+    pointer-events: none;
+}
+
+#slider_text figure p, figcaption{
+    color: white;
+    font-weight: normal;
+}
+
+#slider_text figure p{
+    font-style: italic;
+    font-size: 30px;
+}
+
+#slider_text figure figcaption{
+    font-size: 20px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+/*SECAO FOOTER*/
+
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    padding: 60px 0 250px 0;
+    background: rgb(40, 40, 51);
+}
+
+footer ul{
+    list-style: none;
+}
+
+footer span,p,ul{
+    display: block;
+    padding: 0;
+    margin: 0;
+    color: rgb(98, 92, 92);
+}
+
+footer span{
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: larger;
+}
+
+
+footer p:nth-child(2){
+    width: 450px;
+}
+
+footer p:nth-child(3){
+    width: 200px;
+}
+
+footer ul{
+    width: 130px;
+}
+
+/*SHOW*/
+
+.atual{
+    opacity: 1;
+}
+
+/*MENU PEQUENO*/
+
+@media screen and (max-width:1115px){
+    #menu{
+        display: block;
+    }
+
+    #btn_menu{
+        display: block;
+    }
+
+    .lista_menu{
+        display: block;
+        max-height: 0px;
+        transition: max-height 1s;
+        background: #242c2c;
+    }
+
+    #menu li{
+        display: block;
+        text-align: center;
+        width: 100%;
+        border-bottom: 1px dotted rgba(255,255,255, 0.2);
+    }
+
+}
+
+.show_menu{
+    max-height: 500px;
+    display: block;
+    transition: max-height 1s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
